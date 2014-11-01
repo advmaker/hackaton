@@ -1,4 +1,5 @@
 github.com/go-martini/martini
 github.com/martini-contrib/render
 github.com/eaigner/hood
+github.com/lib/pq
 github.com/martini-contrib/auth
