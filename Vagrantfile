@@ -5,14 +5,17 @@
 $script = <<SCRIPT
     apt-get update
     apt-get -y install git mc golang
-    apt-get -y install mercurial meld
+    apt-get -y install postgresql postgresql-contrib
+
+    apt-get -y install nodejs npm
+    ln -s /usr/bin/nodejs /usr/bin/node
+    npm install bower -g
+    npm install gulp -g
 
     export GOPATH=~/
-    echo export GOPATH=$GOPATH >> ~/.bash_profile
     export PATH="$PATH:$GOPATH/bin"
+    echo export GOPATH=$GOPATH >> ~/.bash_profile
     echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bash_profile
-
-    go get github.com/revel/cmd/revel
 SCRIPT
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
