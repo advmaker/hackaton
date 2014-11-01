@@ -1,0 +1,25 @@
+{
+    "name": "gogo",
+    "version": "0.0.1",
+    "authors": [
+        "Anna V. Chernyaeva <a.chernyaeva@advmaker.net>"
+    ],
+    "description": "Hackaton",
+    "moduleType": [
+        "node"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "bootstrap": "~3",
+        "jquery": "~1",
+        "font-awesome": "~4"
+    }
+
+}
