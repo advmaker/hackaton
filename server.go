@@ -13,8 +13,7 @@ import (
 
 func main() {
 	//	db, err := sql.Open("postgres", "postgres://root:G4rr6Df7l@hotfile25.com")
-	db, err := hood.Open("postgres", "host=hotfile25.com port=5432 dbname=achievements_db user=root password=root")
-	//	db, err := sql.Open("postgres", "host=localhost port=5432 dbname=achievements_db user=vagrant password=vagrant")
+	db, err := hood.Open("postgres", "host=hotfile25.com port=5432 dbname=achievements_db user=root password=G4rr6Df7l")
 	if err != nil {
 		log.Fatal(err)
 	} else {

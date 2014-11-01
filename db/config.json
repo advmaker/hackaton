@@ -1,14 +1,14 @@
 {
     "production": {
         "driver": "postgres",
-        "source": "host=hotfile25.com port=5432 dbname=achievements_db user=root password=root"
+        "source": "host=hotfile25.com port=5432 dbname=achievements_db user=root password=G4rr6Df7l"
     },
     "test": {
         "driver": "postgres",
-        "source": "host=hotfile25.com port=5432 dbname=achievements_db user=root password=root"
+        "source": "host=hotfile25.com port=5432 dbname=achievements_db user=root password=G4rr6Df7l"
     },
     "development": {
         "driver": "postgres",
-        "source": "host=hotfile25.com port=5432 dbname=achievements_db user=root password=root"
+        "source": "host=hotfile25.com port=5432 dbname=achievements_db user=root password=G4rr6Df7l"
     }
 }
