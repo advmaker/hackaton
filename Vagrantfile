@@ -12,7 +12,7 @@ $script = <<SCRIPT
     npm install bower -g
     npm install gulp -g
 
-    export GOPATH=~/
+    export GOPATH=~
     export PATH="$PATH:$GOPATH/bin"
     echo export GOPATH=$GOPATH >> ~/.bash_profile
     echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bash_profile
