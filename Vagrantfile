@@ -18,6 +18,11 @@ $script = <<SCRIPT
     echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bash_profile
 
     cd /opt/
+    git clone https://github.com/pote/gpm.git && cd gpm
+    ./configure
+    make install
+
+    cd /opt/
     git clone https://github.com/pote/gvp.git && cd /opt/gvp
     ./configure
     make install
