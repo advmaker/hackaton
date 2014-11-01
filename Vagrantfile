@@ -14,6 +14,7 @@ $script = <<SCRIPT
 
     export GOPATH=/home/vagrant
     export PATH="$PATH:$GOPATH/bin"
+    export PORT=8000
     echo export GOPATH=$GOPATH >> ~/.bash_profile
     echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bash_profile
 
@@ -35,7 +36,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.box = "ubuntu/trusty64"
-    config.vm.network :forwarded_port, host: 6666, guest: 80
+    config.vm.network :forwarded_port, host: 6666, guest: 8000
 
     config.vm.synced_folder "./", "/home/vagrant"
 
