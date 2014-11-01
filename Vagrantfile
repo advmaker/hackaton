@@ -3,6 +3,7 @@
 
 # bootstrap script partially copied from https://github.com/Lukx/vagrant-lamp
 $script = <<SCRIPT
+    apt-get update
     apt-get -y install git mc golang
     apt-get -y install mercurial meld
 
