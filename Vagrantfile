@@ -16,6 +16,12 @@ $script = <<SCRIPT
     export PATH="$PATH:$GOPATH/bin"
     echo export GOPATH=$GOPATH >> ~/.bash_profile
     echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bash_profile
+
+    cd /opt/
+    git clone https://github.com/pote/gvp.git && cd /opt/gvp
+    ./configure
+    make install
+
 SCRIPT
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
