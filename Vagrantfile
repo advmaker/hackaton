@@ -4,6 +4,14 @@
 # bootstrap script partially copied from https://github.com/Lukx/vagrant-lamp
 $script = <<SCRIPT
     apt-get -y install git mc golang
+    apt-get -y install mercurial meld
+
+    export GOPATH=~/
+    echo export GOPATH=$GOPATH >> ~/.bash_profile
+    export PATH="$PATH:$GOPATH/bin"
+    echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.bash_profile
+
+    go get github.com/revel/cmd/revel
 SCRIPT
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
