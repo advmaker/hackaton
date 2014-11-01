@@ -1,26 +1,20 @@
 package main
 
 import (
-	"github.com/go-martini/martini"
-	"github.com/martini-contrib/render"
-	"github.com/martini-contrib/auth"
+//	"github.com/go-martini/martini"
+//	"github.com/martini-contrib/render"
+//  "github.com/martini-contrib/auth"
 	"github.com/eaigner/hood"
+	"log"
 )
 
 func main() {
 
-	m := martini.Classic()
-
-	m.Use(render.Renderer(render.Options{
-		Layout: "layout",
-		Directory: "templates",
-	}))
-
-	m.Use(martini.Static("public"))
-
-	m.Get("/", func(r render.Render) {
-		r.HTML(200, "parts/index", "Anna")
-	})
-
-	m.Run()
+	db, err := hood.Open("postgres", "host=127.0.0.1 port=5432 dbname=achievements_db user=root password=аа sslmode=verify-full")
+	if err != nil {
+//		log.Fatal(err)
+	} else {
+		some := db.QueryRow("SELECT (1+1) AS some")
+		log.Fatal(some)
+	}
 }
