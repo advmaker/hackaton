@@ -15,6 +15,7 @@ $script = <<SCRIPT
     export GOPATH=/home/vagrant
     export PATH="$PATH:$GOPATH/bin"
     export PORT=8000
+    export PGHOST=/var/run/postgresql
     echo export GOPATH=$GOPATH >> /home/vagrant/.bash_profile
     echo 'export PATH="$PATH:$GOPATH/bin"' >> /home/vagrant/.bash_profile
 
