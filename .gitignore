@@ -1,5 +1,6 @@
 .idea/
 achievement/public/
+db/config.json
 *.sublime-project
 *.sublime-workspace
 .bash_*
