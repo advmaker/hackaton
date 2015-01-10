@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/eaigner/hood"
+	"github.com/advmaker/hood"
 	"time"
 )
 
