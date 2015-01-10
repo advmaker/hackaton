@@ -1,8 +1,5 @@
 .idea/
-public/
-src/github.com
-pkg/
-bin/
+achievement/public/
 *.sublime-project
 *.sublime-workspace
 .bash_*
