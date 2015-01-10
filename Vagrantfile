@@ -12,6 +12,8 @@ $script = <<SCRIPT
     npm install bower -g
     npm install gulp -g
 
+    mkdir -p /home/vagrant/src/github.com/advmaker/hackaton
+
     export GOPATH=/home/vagrant
     export PATH="$PATH:/home/vagrant/bin"
     export PORT=8000
@@ -39,7 +41,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = "ubuntu/trusty64"
     config.vm.network "private_network", ip: "192.168.100.100"
 
-    config.vm.synced_folder "./", "/home/vagrant"
+    config.vm.synced_folder "./", "/home/vagrant/src/github.com/advmaker/hackaton"
 
     config.vm.provider "virtualbox" do |v|
       v.name = "hackaton_vm" # PROJECT NAME PUT HERE
