@@ -3,3 +3,5 @@ public/
 src/
 pkg/
 bin/
+*.sublime-project
+*.sublime-workspace
