@@ -11,7 +11,7 @@ type Achievement struct {
 	ImageUrl       string `sql:"size(255)"`
 	Title          string `sql:"size(255)"`
 	Description    string
-	ProgressLimit int
+	ProgressLimit  int
 	CreatedAt      time.Time
 	UpdatedAt      time.Time
 	DeletedAt      time.Time
