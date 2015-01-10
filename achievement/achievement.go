@@ -2,6 +2,8 @@ package achievement
 
 import (
 	"github.com/go-martini/martini"
+//	"github.com/eaigner/hood"
+//	"fmt"
 )
 
 type Application struct {
@@ -11,7 +13,7 @@ type Application struct {
 func (a *Application) Run() {
 	a.martini = martini.Classic()
 	a.martini.Get("/", func() string {
-			return "555"
+			return "some"
 		})
 	a.martini.Run()
 }
