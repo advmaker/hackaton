@@ -3,4 +3,6 @@ public/
 src/github.com
 pkg/
 bin/
+*.sublime-project
+*.sublime-workspace
 .bash_*
