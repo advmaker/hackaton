@@ -1,5 +1,6 @@
 .idea/
 public/
-src/
+src/github.com
 pkg/
 bin/
+.bash_*
