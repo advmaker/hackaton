@@ -11,7 +11,7 @@ type Application struct {
 func (a *Application) Run() {
 	a.martini = martini.Classic()
 	a.martini.Get("/", func() string {
-			return "123"
+			return "555"
 		})
 	a.martini.Run()
 }
