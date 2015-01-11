@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/advmaker/hackaton/achievement"
+  "github.com/advmaker/hackaton/achievement"
 )
 
 func main() {
