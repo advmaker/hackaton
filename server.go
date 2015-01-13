@@ -1,10 +1,18 @@
 package main
 
 import (
-  "github.com/advmaker/hackaton/achievement"
+  //  "fmt"
+  "github.com/go-martini/martini"
+  "github.com/advmaker/hackaton/config"
+  "github.com/advmaker/hackaton/achievement/controllers"
 )
 
 func main() {
-	app := achievement.Application{}
-	app.Run()
+  app := martini.Classic()
+
+  app.Map(config.DB())
+
+  app.Get("/", controllers.ApplicationIndex)
+
+  app.Run()
 }
