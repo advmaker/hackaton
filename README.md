@@ -4,6 +4,7 @@ hackaton
 
 #Architecture
 User
+
   Has many projects
 
   - id
@@ -14,6 +15,7 @@ User
   - deleted_at
 
 Achievement
+
   Belongs to project
 
   Has many progresses
@@ -29,6 +31,7 @@ Achievement
   - deleted_at
 
 Project
+
   Has many achievements
 
   - id
@@ -38,6 +41,7 @@ Project
   - deleted_at
 
 Progress
+
   Belongs to achievement
 
   - id
@@ -52,8 +56,8 @@ Progress
 
 #TODO
 1. [ ] Создать базу.
-    - [ ] Настроить gorm.
-    - [ ] Настроить goose.
+    - [X] Настроить gorm.
+    - [X] Настроить goose.
     - [ ] Инициализировать структуру (миграции).
     - [ ] Создать модели.
 2. [ ] Тесты.
