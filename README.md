@@ -5,7 +5,6 @@ hackaton
 #Architecture
 User
   Has many projects
-  Has and belongs to many achievements
 
   - id
   - email
@@ -16,6 +15,7 @@ User
 
 Achievement
   Belongs to project
+
   Has many progresses
 
   - id
