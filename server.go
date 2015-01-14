@@ -4,7 +4,7 @@ import (
   //  "fmt"
   "github.com/go-martini/martini"
   "github.com/advmaker/hackaton/config"
-  "github.com/advmaker/hackaton/achievement/controllers"
+  "github.com/advmaker/hackaton/app/controllers"
 )
 
 func main() {

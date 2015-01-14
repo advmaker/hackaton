@@ -2,9 +2,11 @@ package main
 
 import (
 	"database/sql"
+
   "github.com/jinzhu/gorm"
-  "github.com/advmaker/hackaton/achievement/models"
+
   "github.com/advmaker/hackaton/config"
+  "github.com/advmaker/hackaton/app/models"
 )
 
 var db gorm.DB = config.DB()
