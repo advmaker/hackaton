@@ -4,4 +4,5 @@
 .bash_*
 .env
 .vagrant/
+.DS_Store
 public/assets/

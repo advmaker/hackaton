@@ -16,7 +16,7 @@ func main() {
 
 	app.Use(martini.Logger())
 
-	app.Map(config.DB())
+	app.Map(&config.DB())
 
 	app.Get("/users/new", usersController.New)
 

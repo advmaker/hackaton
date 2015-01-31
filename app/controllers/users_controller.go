@@ -7,7 +7,6 @@ import (
 
 type UsersController struct{ Controller }
 
-func (controller *UsersController) New(db gorm.DB, l *log.Logger) string {
-	l.Print("123")
+func (controller *UsersController) New(db *gorm.DB, l *log.Logger) string {
 	return "some"
 }
