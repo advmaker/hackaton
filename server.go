@@ -1,18 +1,20 @@
 package main
 
 import (
-  //  "fmt"
-  "github.com/go-martini/martini"
-  "github.com/advmaker/hackaton/config"
-  "github.com/advmaker/hackaton/app/controllers"
+	//  "fmt"
+	"github.com/advmaker/hackaton/app/controllers"
+	"github.com/advmaker/hackaton/config"
+
+	"github.com/go-martini/martini"
+	_ "github.com/joho/godotenv/autoload"
 )
 
 func main() {
-  app := martini.Classic()
+	app := martini.Classic()
 
-  app.Map(config.DB())
+	app.Map(config.DB())
 
-  app.Get("/", controllers.ApplicationIndex)
+	app.Get("/", controllers.ApplicationIndex)
 
-  app.Run()
+	app.Run()
 }

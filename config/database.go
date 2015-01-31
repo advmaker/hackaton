@@ -1,20 +1,23 @@
 package config
 
 import (
-  "log"
-  "github.com/jinzhu/gorm"
-  _ "github.com/lib/pq"
+	"github.com/jinzhu/gorm"
+	_ "github.com/lib/pq"
+	"log"
+	"os"
 )
 
 func DB() gorm.DB {
-  db, err := gorm.Open("postgres", "user=achievements_user dbname=achievements_dev_db password=achievement_unlock! sslmode=disable")
-  if err != nil { log.Fatal(err) }
+	db, err := gorm.Open(os.Getenv("DB_ADAPTER"), os.Getenv("DB_DSN"))
+	if err != nil {
+		log.Fatal(err)
+	}
 
-  db.DB().Ping()
-  db.DB().SetMaxIdleConns(10)
-  db.DB().SetMaxOpenConns(100)
+	db.DB().Ping()
+	db.DB().SetMaxIdleConns(10)
+	db.DB().SetMaxOpenConns(100)
 
-  return db
+	return db
 }
 
 func CloseDB(db gorm.DB) {

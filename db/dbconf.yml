@@ -1,3 +1,3 @@
 development:
-  driver: postgres
-  open: user=achievements_user dbname=achievements_dev_db password=achievement_unlock! sslmode=disable
+  driver: $DB_ADAPTER
+  open: $DB_DSN

@@ -4,3 +4,4 @@ db/config.json
 *.sublime-project
 *.sublime-workspace
 .bash_*
+.env

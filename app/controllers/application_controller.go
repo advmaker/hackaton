@@ -1,7 +1,9 @@
 package controllers
 
-import()
+import(
+  "os"
+)
 
 func ApplicationIndex() string {
-  return "some"
+  return os.Getenv("DB_ADAPTER")
 }
