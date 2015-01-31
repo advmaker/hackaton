@@ -31,6 +31,8 @@ $script = <<SCRIPT
     ./configure
     make install
 
+    chown -R vagrant:vagrant /home/vagrant
+
 SCRIPT
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
