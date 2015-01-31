@@ -12,9 +12,11 @@ import (
 func main() {
 	app := martini.Classic()
 
+	app.Use(martini.Logger())
+
 	app.Map(config.DB())
 
-	app.Get("/", controllers.ApplicationIndex)
+	app.Get("/", (*controllers.UsersController).New)
 
 	app.Run()
 }

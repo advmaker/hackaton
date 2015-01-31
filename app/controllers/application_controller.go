@@ -1,9 +1,5 @@
 package controllers
 
-import(
-  "os"
-)
+import ()
 
-func ApplicationIndex() string {
-  return os.Getenv("DB_ADAPTER")
-}
+type Controller struct{}

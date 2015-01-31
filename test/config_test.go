@@ -1,12 +1,8 @@
 package config
 
-import(
-  "github.com/joho/godotenv"
-
-  "log"
-  "testing"
-  "os"
+import (
+	"testing"
 )
 
-func TestDotenv (t *testing.T)  {
+func TestDotenv(t *testing.T) {
 }
