@@ -3,6 +3,10 @@
 
 # bootstrap script partially copied from https://github.com/Lukx/vagrant-lamp
 $script = <<SCRIPT
+
+    locale-gen ru_RU.UTF-8
+    dpkg-reconfigure locales
+
     apt-get update
     apt-get -y install git mc golang
     apt-get -y install postgresql postgresql-contrib
@@ -31,7 +35,14 @@ $script = <<SCRIPT
     ./configure
     make install
 
+    go get github.com/go-martini/martini
+
     chown -R vagrant:vagrant /home/vagrant
+
+    mkdir -p /usr/local/pgsql/data
+    chown postgres:postgres /usr/local/pgsql/data/
+    sudo -u postgres /usr/lib/postgresql/9.3/bin/initdb -D /usr/local/pgsql/data
+    su postgres;psql -c 'CREATE USER vagrant WITH PASSWORD \'vagrant\''; psql -c 'CREATE DATABASE achievements_db;'
 
 SCRIPT
 
