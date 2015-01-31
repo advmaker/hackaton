@@ -7,12 +7,15 @@ import (
 
 	"github.com/go-martini/martini"
 	_ "github.com/joho/godotenv/autoload"
+	"github.com/martini-contrib/render"
 )
 
 func main() {
 	app := martini.Classic()
 
 	usersController := new(controllers.UsersController)
+
+	app.Use(render.Renderer())
 
 	app.Use(martini.Logger())
 
