@@ -1,7 +1,7 @@
 .idea/
-public/
-db/config.json
 *.sublime-project
 *.sublime-workspace
 .bash_*
 .env
+.vagrant/
+public/assets/
