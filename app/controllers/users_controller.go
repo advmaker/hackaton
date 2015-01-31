@@ -11,7 +11,6 @@ type UsersController struct{ Controller }
 
 func (controller *UsersController) New(db gorm.DB, l *log.Logger, r render.Render) {
 
-
-	r.HTML(200,"hello","oggggg")
+	r.HTML(200,"form","oggggg")
 
 }

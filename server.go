@@ -15,7 +15,12 @@ func main() {
 
 	usersController := new(controllers.UsersController)
 
-	app.Use(render.Renderer())
+
+	renderOptions := render.Options{
+		Layout: "layout",
+	}
+
+	app.Use(render.Renderer(renderOptions))
 
 	app.Use(martini.Logger())
 
